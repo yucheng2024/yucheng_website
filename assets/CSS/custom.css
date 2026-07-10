@@ -10,12 +10,16 @@ body {
     display: none;
 }
 
+#main {
+    max-width: 1600px;
+}
+
 .page {
-    max-width: 1500px;
+    max-width: 1600px;
 }
 
 .page__content {
-    max-width: 1120px;
+    max-width: 1200px;
     padding-top: 0.35rem;
 }
 
@@ -428,6 +432,10 @@ section {
 @media (min-width: 80em) {
     .sidebar {
         opacity: 1;
+    }
+
+    .wide .page {
+        width: calc(100% - 300px);
     }
 
     .page {
