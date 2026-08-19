@@ -1,7 +1,7 @@
 :root {
     --ink: #172534;
     --ink-soft: #42566a;
-    --muted: #6d7f90;
+    --muted: #5f7283;
     --navy: #173f63;
     --blue: #2a668f;
     --blue-soft: #eaf2f8;
@@ -50,13 +50,15 @@ body {
 }
 
 .page__content {
-    max-width: 1040px;
+    float: none !important;
+    max-width: 960px;
+    margin-inline: auto !important;
     padding-top: 0;
 }
 
 .page__content p,
 .page__content li {
-    font-size: clamp(14.5px, 0.2vw + 13.5px, 15.5px);
+    font-size: 16px;
 }
 
 .page__content a,
@@ -268,6 +270,7 @@ section {
 
 .sidebar {
     padding-top: 0;
+    opacity: 1;
 }
 
 .sidebar.sticky {
@@ -284,12 +287,18 @@ section {
 }
 
 .author__avatar {
-    margin-bottom: 0.75rem;
+    width: min(100%, 196px);
+    margin: 0 auto 0.85rem;
+    text-align: center;
 }
 
 .author__avatar img {
-    min-width: 148px;
-    max-width: 176px;
+    display: block;
+    width: 196px;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin-inline: auto;
     border: 1px solid #d2dde6;
     border-radius: 12px !important;
     box-shadow: 0 8px 20px rgba(18, 45, 74, 0.07);
@@ -445,8 +454,8 @@ section {
 }
 
 #research-news .news-year time {
-    color: #6c8192;
-    font-size: 0.74rem;
+    color: #5e7486;
+    font-size: 0.76rem;
     font-weight: 730;
     letter-spacing: 0.055em;
     text-transform: uppercase;
@@ -532,7 +541,7 @@ section {
     padding: 0.78rem 0;
     border-bottom: 1px solid var(--line-soft);
     color: #3c5062;
-    line-height: 1.58;
+    line-height: 1.62;
 }
 
 #publications ul li:last-child {
@@ -547,7 +556,7 @@ section {
     border-radius: 5px;
     color: var(--navy);
     background: #f4f8fb;
-    font-size: 0.72em;
+    font-size: 0.76em;
     font-weight: 750;
     letter-spacing: 0.015em;
     vertical-align: 0.08em;
@@ -657,7 +666,7 @@ section {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 63.99em) {
     #main {
         padding-top: 1rem;
     }
@@ -690,7 +699,7 @@ section {
 
     .page__content p,
     .page__content li {
-        font-size: 15px !important;
+        font-size: 15.5px !important;
         line-height: 1.65 !important;
     }
 
@@ -733,8 +742,7 @@ section {
     }
 
     .sidebar .author__name {
-        margin: 0 0 0.35rem !important;
-        font-size: 1.05rem !important;
+        display: none !important;
     }
 
     .sidebar .author__bio {
@@ -820,11 +828,17 @@ section {
     }
 
     .quick-links {
-        gap: 0.3rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.35rem 0.45rem;
     }
 
     .quick-links a {
-        font-size: 0.72rem;
+        justify-content: center;
+        min-height: 2.5rem;
+        padding: 0.4rem 0.2rem;
+        font-size: 0.74rem;
+        text-align: center;
     }
 
     .cv-grid {
@@ -851,7 +865,7 @@ section {
 
     .pub-group-title {
         padding: 0.82rem 2.45rem 0.82rem 0.85rem;
-        font-size: 0.86rem;
+        font-size: 0.92rem;
     }
 
     #publications .publication-group > ul {
@@ -881,12 +895,8 @@ section {
         max-width: 92px !important;
     }
 
-    .sidebar .author__name {
-        font-size: 0.98rem !important;
-    }
-
     .sidebar .author__bio {
-        font-size: 0.76rem !important;
+        font-size: 0.8rem !important;
     }
 
     .sidebar .author__urls {
@@ -894,7 +904,7 @@ section {
     }
 
     .sidebar .author__urls li {
-        font-size: 0.75rem !important;
+        font-size: 0.78rem !important;
     }
 }
 

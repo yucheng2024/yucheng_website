@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Yucheng Xie"
   avatar : "/assets/images/5A9A5FAC-C9FD-42A5-A5C8-B096437F237D_1_201_a.jpeg"
-  bio    : "Assistant Professor<br>Department of Graduate Computer Science and Engineering<br>Katz School of Science and Health<br>Yeshiva University<br>205 Lexington Ave, 7th floor, Room 714<br>Manhattan, New York, NY 10016"
+  bio    : "Assistant Professor<br>Department of Graduate Computer Science and Engineering<br>Katz School of Science and Health<br>Yeshiva University"
   links:
     - label: "Official Website"
       icon: "fas fa-fw fa-link"
