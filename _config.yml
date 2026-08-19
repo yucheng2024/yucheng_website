@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Yucheng Xie
+description: "Yucheng Xie is an Assistant Professor at Yeshiva University researching smart healthcare, wireless sensing, and AI security and privacy."
+url: "https://www.yuchengxie.com"
 email: yucheng.xie@yu.edu
 twitter_username: username
 github_username: username
