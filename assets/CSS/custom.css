@@ -131,8 +131,7 @@ section {
 
 .faculty-hero {
     margin: 0 0 2.35rem;
-    padding: 0.15rem 0 1.5rem;
-    border-bottom: 1px solid var(--line);
+    padding: 0.15rem 0 0.45rem;
 }
 
 .faculty-hero__lead {
@@ -202,16 +201,15 @@ section {
 .page__content > section > h2 {
     position: relative;
     display: block;
-    margin-bottom: 1.15rem;
-    padding: 0 0 0.58rem 0.78rem;
-    border-bottom: 1px solid var(--line);
+    margin-bottom: 1.35rem;
+    padding: 0 0 0 0.78rem;
 }
 
 .page__content > section > h2::before {
     content: "";
     position: absolute;
     top: 0.14em;
-    bottom: 0.7em;
+    bottom: 0.12em;
     left: 0;
     width: 3px;
     border-radius: 999px;
@@ -223,27 +221,14 @@ section {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    gap: clamp(1.5rem, 3vw, 2.4rem);
 }
 
 .research-direction {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: 1.3rem clamp(1rem, 2.1vw, 1.4rem) 1.35rem;
-}
-
-.research-direction:first-child {
-    padding-left: 0;
-}
-
-.research-direction:last-child {
-    padding-right: 0;
-}
-
-.research-direction + .research-direction {
-    border-left: 1px solid var(--line);
+    padding: 0;
 }
 
 .research-direction__title {
@@ -275,8 +260,7 @@ section {
 
 .cv-block h2 {
     margin-bottom: 0.7rem;
-    padding-bottom: 0.45rem;
-    border-bottom: 1px solid var(--line);
+    padding-bottom: 0;
     color: #567084;
     font-size: 12px;
     font-weight: 760;
@@ -285,9 +269,8 @@ section {
 }
 
 .cv-item + .cv-item {
-    margin-top: 0.65rem;
-    padding-top: 0.65rem;
-    border-top: 1px solid var(--line-soft);
+    margin-top: 1rem;
+    padding-top: 0;
 }
 
 .cv-item__header {
@@ -509,13 +492,12 @@ section {
 /* Editorial publication index */
 .publication-group {
     margin: 0;
-    border-top: 1px solid var(--line);
     background: transparent;
     scroll-margin-top: 1.2rem;
 }
 
-.publication-group:last-of-type {
-    border-bottom: 1px solid var(--line);
+.publication-group + .publication-group {
+    border-top: 1px solid rgba(220, 229, 237, 0.78);
 }
 
 .pub-group-title {
@@ -571,7 +553,6 @@ section {
 #publications ul li {
     margin: 0;
     padding: 0.82rem 0 0.9rem;
-    border-top: 1px solid var(--line-soft);
     color: #45596b;
     font-size: 15.25px;
     line-height: 1.58;
@@ -608,41 +589,6 @@ section {
 }
 
 /* Awards and teaching */
-.academic-highlights {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1.8rem, 4vw, 3.4rem);
-    margin-bottom: 2.9rem;
-}
-
-.academic-highlights section {
-    min-width: 0;
-    margin: 0;
-}
-
-.academic-highlights h2 {
-    position: relative;
-    margin: 0 0 0.7rem;
-    padding: 0 0 0.58rem 0.78rem;
-    border-bottom: 1px solid var(--line);
-    color: var(--ink);
-    font-size: clamp(1.35rem, 1.15rem + 0.45vw, 1.6rem);
-    font-weight: 730;
-    letter-spacing: -0.026em;
-    line-height: 1.2;
-}
-
-.academic-highlights h2::before {
-    content: "";
-    position: absolute;
-    top: 0.14em;
-    bottom: 0.7em;
-    left: 0;
-    width: 3px;
-    border-radius: 999px;
-    background: var(--blue);
-}
-
 #recent-awards ul,
 #teaching-experiences ul {
     margin: 0;
@@ -653,29 +599,44 @@ section {
 #recent-awards li,
 #teaching-experiences li {
     margin: 0;
-    padding: 0.62rem 0;
-    border-bottom: 1px solid var(--line-soft);
+    padding: 0;
     color: #405568;
     font-size: 15px;
     line-height: 1.52;
 }
 
-#recent-awards li:last-child,
-#teaching-experiences li:last-child {
-    border-bottom: 0;
+#recent-awards li + li,
+#teaching-experiences li + li {
+    margin-top: 0.85rem;
 }
 
 #recent-awards li b {
     color: #24445e;
 }
 
-/* Professional service */
-.service-group {
-    border-top: 1px solid var(--line);
+#teaching-experiences li {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: baseline;
 }
 
-.service-group:last-child {
-    border-bottom: 1px solid var(--line);
+#teaching-experiences li strong {
+    color: #24445e;
+    font-weight: 700;
+}
+
+#teaching-experiences li span {
+    color: #516679;
+}
+
+/* Professional service */
+.service-group {
+    border-top: 0;
+}
+
+.service-group + .service-group {
+    border-top: 1px solid rgba(220, 229, 237, 0.78);
 }
 
 .service-group-title {
@@ -725,7 +686,6 @@ section {
     position: relative;
     margin: 0;
     padding: 0.48rem 0 0.5rem 1rem;
-    border-top: 1px solid var(--line-soft);
     color: #405568;
     font-size: 15.25px;
     line-height: 1.55;
@@ -989,15 +949,12 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .research-direction,
-    .research-direction:first-child,
-    .research-direction:last-child {
-        padding: 1rem 0 1.05rem;
+    .research-directions {
+        gap: 1.45rem;
     }
 
-    .research-direction + .research-direction {
-        border-top: 1px solid var(--line);
-        border-left: 0;
+    .research-direction {
+        padding: 0;
     }
 
     .research-direction__title {
@@ -1053,14 +1010,9 @@ section {
         text-align: center;
     }
 
-    .cv-grid,
-    .academic-highlights {
+    .cv-grid {
         grid-template-columns: 1fr;
         gap: 1.45rem;
-    }
-
-    .academic-highlights {
-        margin-bottom: 2.3rem;
     }
 
     #research-news .news-year {
@@ -1112,11 +1064,6 @@ section {
         left: -1.05rem;
     }
 
-    .publication-group,
-    .publication-group:last-of-type {
-        border-color: var(--line);
-    }
-
     .pub-group-title,
     .service-group-title {
         padding-top: 0.82rem;
@@ -1132,6 +1079,11 @@ section {
     #professional-services .service-group li {
         padding-top: 0.52rem;
         padding-bottom: 0.54rem;
+    }
+
+    #teaching-experiences li {
+        grid-template-columns: 1fr;
+        gap: 0.12rem;
     }
 
     .site-visits {
