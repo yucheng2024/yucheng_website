@@ -183,8 +183,22 @@ section {
 }
 
 .quick-links a:hover::after,
-.quick-links a:focus-visible::after {
+.quick-links a:focus-visible::after,
+.quick-links a[aria-current="true"]::after {
     transform: scaleX(1);
+}
+
+.quick-links a[aria-current="true"] {
+    color: var(--navy);
+}
+
+#research-interests,
+#research-news,
+#publications,
+#recent-awards,
+#teaching-experiences,
+#professional-services {
+    scroll-margin-top: 1.2rem;
 }
 
 .cv-grid {
@@ -722,6 +736,69 @@ section {
 
     .page {
         column-gap: 2rem;
+    }
+}
+
+@media (min-width: 84em) {
+    .wide .page {
+        width: calc(100% - 520px);
+        margin-right: 200px;
+    }
+
+    .quick-links {
+        position: fixed;
+        z-index: 20;
+        top: 50%;
+        right: max(0.85rem, calc((100vw - 1520px) / 2 + 0.85rem));
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 0.12rem;
+        width: 7.25rem;
+        margin: 0;
+        padding: 0.4rem 0 0.4rem 0.9rem;
+        border-left: 1px solid #d6e1e9;
+        transform: translateY(-50%);
+    }
+
+    .quick-links a {
+        width: 100%;
+        min-height: 2.1rem;
+        padding: 0.32rem 0.1rem;
+        color: #637789;
+        font-size: 0.68rem;
+        letter-spacing: 0.055em;
+        text-decoration: none !important;
+    }
+
+    .quick-links a::before {
+        content: "";
+        position: absolute;
+        top: 0.42rem;
+        bottom: 0.42rem;
+        left: -0.96rem;
+        width: 3px;
+        border-radius: 999px;
+        background: var(--blue);
+        opacity: 0;
+        transform: scaleY(0.55);
+        transition: opacity 150ms ease, transform 150ms ease;
+    }
+
+    .quick-links a::after {
+        display: none;
+    }
+
+    .quick-links a:hover,
+    .quick-links a:focus-visible,
+    .quick-links a[aria-current="true"] {
+        color: var(--navy);
+    }
+
+    .quick-links a[aria-current="true"]::before {
+        opacity: 1;
+        transform: scaleY(1);
     }
 }
 

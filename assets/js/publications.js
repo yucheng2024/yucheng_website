@@ -11,6 +11,7 @@
 
         window.requestAnimationFrame(() => {
             target.scrollIntoView({ block: "start" });
+            window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
         });
     };
 
