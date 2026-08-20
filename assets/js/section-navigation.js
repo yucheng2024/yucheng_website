@@ -31,7 +31,7 @@
         cleanAddress();
     };
 
-    document.querySelectorAll('.quick-links a[href^="#"], .keyword-list a[href^="#"]').forEach((link) => {
+    document.querySelectorAll('.quick-links a[href^="#"], .research-direction[href^="#"]').forEach((link) => {
         const target = document.getElementById(link.getAttribute("href").slice(1));
         if (!target) return;
 

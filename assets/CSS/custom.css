@@ -204,30 +204,36 @@ section {
 .cv-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
+    gap: clamp(1.8rem, 4vw, 3.4rem);
+    margin-top: 0.2rem;
 }
 
 .cv-block {
-    padding: 0.75rem 1.5rem 0.35rem 0;
+    padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
 }
 
 .cv-block + .cv-block {
-    padding-right: 0;
-    padding-left: 1.5rem;
-    border-left: 1px solid var(--line);
+    padding: 0;
+    border-left: 0;
 }
 
 .cv-block h2 {
-    margin-bottom: 0.95rem;
-    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--line);
+    color: #567084;
+    font-size: 12px;
+    font-weight: 760;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
 }
 
 .cv-item + .cv-item {
-    margin-top: 0.85rem;
-    padding-top: 0.82rem;
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
     border-top: 1px solid var(--line-soft);
 }
 
@@ -242,14 +248,14 @@ section {
 .cv-item__header h3 {
     margin: 0;
     color: #20384e;
-    font-size: 0.93rem;
+    font-size: 15.5px;
     font-weight: 700;
     line-height: 1.35;
 }
 
 .cv-item__header span {
     color: var(--muted);
-    font-size: 0.75rem;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.02em;
     white-space: nowrap;
@@ -258,36 +264,98 @@ section {
 .cv-item p {
     margin: 0;
     color: #506477;
+    font-size: 15px;
 }
 
-.keyword-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem 1.4rem;
+.research-overview__intro {
+    max-width: 48rem;
+    margin: -0.25rem 0 1.1rem;
+    color: #53687a;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.keyword-list a,
-.keyword-list span {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.28rem 0 0.18rem;
-    border: 0;
-    border-bottom: 1px solid #b9cfdf;
-    border-radius: 0;
-    background: transparent;
-    color: #365c79;
-    font-size: 0.8rem;
-    font-weight: 680;
-    line-height: 1.3;
+.research-directions {
+    border-bottom: 1px solid var(--line);
+}
+
+.research-direction {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) auto;
+    gap: 0.9rem;
+    align-items: start;
+    padding: 1.05rem 0.15rem 1.08rem 0;
+    border-top: 1px solid var(--line);
+    color: inherit !important;
     text-decoration: none;
-    transition: border-color 140ms ease, color 140ms ease;
+    transition: background-color 150ms ease, padding 150ms ease;
 }
 
-.keyword-list a:hover {
-    color: var(--navy);
-    background: transparent;
-    border-color: var(--blue);
-    text-decoration: none;
+.research-direction:hover,
+.research-direction:focus-visible {
+    padding-right: 0.55rem;
+    padding-left: 0.55rem;
+    background: #f7fafc;
+    text-decoration: none !important;
+}
+
+.research-direction__index {
+    padding-top: 0.12rem;
+    color: #7d93a4;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+}
+
+.research-direction__content {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.72fr) minmax(0, 1.28fr);
+    gap: 0.2rem 1.35rem;
+    min-width: 0;
+}
+
+.research-direction__title {
+    color: #234c6b;
+    font-size: 16px;
+    font-weight: 740;
+    line-height: 1.4;
+}
+
+.research-direction__description {
+    color: #3f5568;
+    font-size: 15.5px;
+    line-height: 1.6;
+}
+
+.research-direction__topics {
+    grid-column: 2;
+    margin-top: 0.22rem;
+    color: #718596;
+    font-size: 12.5px;
+    font-weight: 620;
+    letter-spacing: 0.015em;
+    line-height: 1.5;
+}
+
+.research-direction__action {
+    padding-top: 0.12rem;
+    color: #4d718c;
+    font-size: 11.5px;
+    font-weight: 730;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.research-direction__action::after {
+    content: "\2193";
+    display: inline-block;
+    margin-left: 0.28rem;
+    transition: transform 150ms ease;
+}
+
+.research-direction:hover .research-direction__action::after {
+    transform: translateY(2px);
 }
 
 .sidebar {
@@ -802,6 +870,28 @@ section {
     }
 }
 
+@media (min-width: 84em) and (max-width: 95.99em) {
+    .research-direction__content {
+        grid-template-columns: 1fr;
+        gap: 0.36rem;
+    }
+
+    .research-direction__topics {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 70em) {
+    .research-direction__content {
+        grid-template-columns: 1fr;
+        gap: 0.36rem;
+    }
+
+    .research-direction__topics {
+        grid-column: 1;
+    }
+}
+
 @media (max-width: 63.99em) {
     #main {
         padding-top: 1rem;
@@ -976,6 +1066,38 @@ section {
         padding: 0.15rem 0 1.15rem;
     }
 
+    .research-overview__intro {
+        margin-bottom: 0.8rem;
+        font-size: 15px;
+    }
+
+    .research-direction {
+        grid-template-columns: 1.5rem minmax(0, 1fr);
+        gap: 0.65rem;
+        padding: 0.92rem 0;
+    }
+
+    .research-direction:hover,
+    .research-direction:focus-visible {
+        padding-right: 0.35rem;
+        padding-left: 0.35rem;
+    }
+
+    .research-direction__content {
+        grid-template-columns: 1fr;
+        gap: 0.36rem;
+    }
+
+    .research-direction__description,
+    .research-direction__topics {
+        grid-column: 1;
+    }
+
+    .research-direction__action {
+        grid-column: 2;
+        padding-top: 0;
+    }
+
     .quick-links {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -992,16 +1114,16 @@ section {
 
     .cv-grid {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 1.45rem;
     }
 
     .cv-block {
-        padding: 0.65rem 0 1.1rem;
+        padding: 0;
     }
 
     .cv-block + .cv-block {
-        padding: 1.1rem 0 0.25rem;
-        border-top: 1px solid var(--line);
+        padding: 0;
+        border-top: 0;
         border-left: 0;
     }
 
@@ -1039,6 +1161,10 @@ section {
 }
 
 @media (max-width: 480px) {
+    .research-direction__topics {
+        display: none;
+    }
+
     .sidebar .h-card {
         grid-template-columns: 92px minmax(0, 1fr) !important;
         column-gap: 0.75rem !important;

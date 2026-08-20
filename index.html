@@ -6,13 +6,13 @@ layout: single
 author_profile: true
 classes: wide
 ---
-<link rel="stylesheet" href="{{ '/assets/CSS/custom.css?v=20260819-8' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/CSS/custom.css?v=20260820-9' | relative_url }}">
 <script defer src="{{ '/assets/js/publications.js?v=20260819-3' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/section-navigation.js?v=20260819-1' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/section-navigation.js?v=20260820-2' | relative_url }}"></script>
 
 <header class="faculty-hero">
     <h1>Yucheng Xie</h1>
-    <p class="faculty-hero__lead">Yucheng Xie is a tenure-track assistant professor in the Graduate Department of Computer Science and Engineering at Yeshiva University. His research focuses on smart healthcare and mobile computing; wireless sensing and authentication; and AI security and privacy.</p>
+    <p class="faculty-hero__lead">Yucheng Xie is a tenure-track assistant professor in the Graduate Department of Computer Science and Engineering at Yeshiva University. He develops intelligent and trustworthy sensing systems that connect wireless technologies, mobile computing, and AI with human health, security, and everyday interaction.</p>
     <nav class="quick-links" aria-label="Section navigation">
         <a href="#research-interests">Research</a>
         <a href="#research-news">News</a>
@@ -22,7 +22,42 @@ classes: wide
         <a href="#professional-services">Service</a>
     </nav>
 </header>
-<section class="cv-grid">
+
+<section id="research-interests" class="research-overview">
+    <h2>Research at a Glance</h2>
+    <p class="research-overview__intro">My work explores how sensing and AI systems can better understand people, operate reliably in everyday environments, and remain trustworthy when privacy and security matter.</p>
+    <div class="research-directions">
+        <a class="research-direction" href="#pub-smart-healthcare">
+            <span class="research-direction__index" aria-hidden="true">01</span>
+            <span class="research-direction__content">
+                <span class="research-direction__title">Smart Healthcare and Mobile Computing</span>
+                <span class="research-direction__description">I develop low-effort, privacy-conscious systems that use wearables, smartphones, and wireless signals to support health and accessible interaction by understanding eating, exercise, concentration, and continuous fingerspelling.</span>
+                <span class="research-direction__topics">Wearable and RF health sensing · Dietary and fitness monitoring · Context-aware mobile computing</span>
+            </span>
+            <span class="research-direction__action">View publications</span>
+        </a>
+        <a class="research-direction" href="#pub-wireless-sensing">
+            <span class="research-direction__index" aria-hidden="true">02</span>
+            <span class="research-direction__content">
+                <span class="research-direction__title">Wireless Sensing and Authentication</span>
+                <span class="research-direction__description">I turn Wi-Fi and millimeter-wave signals into contactless sensors for recognizing people, activities, objects, and biometric traits, while improving reliability across users, environments, and emerging mobile networks.</span>
+                <span class="research-direction__topics">Contactless Wi-Fi and mmWave sensing · Biometrics and authentication · Robust cross-environment deployment</span>
+            </span>
+            <span class="research-direction__action">View publications</span>
+        </a>
+        <a class="research-direction" href="#pub-ai-security">
+            <span class="research-direction__index" aria-hidden="true">03</span>
+            <span class="research-direction__content">
+                <span class="research-direction__title">AI Security and Privacy</span>
+                <span class="research-direction__description">I study how sensing and AI systems fail under adversarial manipulation, then build practical defenses, secure mobile inference, liveness checks, and behavior-grounded tools and datasets for ransomware analysis.</span>
+                <span class="research-direction__topics">Adversarial sensing and AI · Secure edge intelligence · Ransomware analysis</span>
+            </span>
+            <span class="research-direction__action">View publications</span>
+        </a>
+    </div>
+</section>
+
+<section class="cv-grid" aria-label="Academic background">
     <div class="cv-block" id="experience">
         <h2>Professional Experience</h2>
         <div class="cv-item">
@@ -55,16 +90,6 @@ classes: wide
             </div>
             <p>Stevens Institute of Technology</p>
         </div>
-    </div>
-</section>
-
-<section id = "research-interests">
-    <h2>Research Interests</h2>
-    <div class="keyword-list">
-        <a href="#pub-smart-healthcare">Smart Healthcare and Mobile Computing</a>
-        <a href="#pub-wireless-sensing">Wireless Sensing and Authentication</a>
-        <a href="#pub-ai-security">AI Security and Privacy</a>
-        <!-- <a href="#pub-broader-perspectives">Books and Broader Perspectives</a> -->
     </div>
 </section>
 
