@@ -916,7 +916,7 @@ section {
     }
 }
 
-@media (min-width: 84em) {
+@media (min-width: 78em) {
     .wide .page {
         width: calc(100% - 520px);
         margin-right: 200px;

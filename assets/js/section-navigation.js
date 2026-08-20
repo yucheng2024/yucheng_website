@@ -55,8 +55,8 @@
     let scheduled = false;
     const updateCurrentSection = () => {
         scheduled = false;
-        const marker = Math.min(window.innerHeight * 0.32, 220);
-        let current = null;
+        const marker = Math.min(window.innerHeight * 0.36, 280);
+        let current = navItems[0] ?? null;
 
         navItems.forEach((item) => {
             if (item.target.getBoundingClientRect().top <= marker) current = item;
