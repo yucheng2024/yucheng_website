@@ -219,14 +219,6 @@ section {
 }
 
 /* Research overview */
-.research-overview__intro {
-    max-width: 46rem;
-    margin: -0.1rem 0 1.25rem;
-    color: #53687a;
-    font-size: 15.5px;
-    line-height: 1.66;
-}
-
 .research-directions {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -252,15 +244,6 @@ section {
 
 .research-direction + .research-direction {
     border-left: 1px solid var(--line);
-}
-
-.research-direction::before {
-    content: "";
-    width: 2.25rem;
-    height: 2px;
-    margin-bottom: 0.85rem;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--blue), #8fb7d1);
 }
 
 .research-direction__title {
@@ -1054,11 +1037,6 @@ section {
 
     .faculty-hero__lead {
         max-width: none;
-    }
-
-    .research-overview__intro {
-        margin-bottom: 0.8rem;
-        font-size: 15px;
     }
 
     .quick-links {
