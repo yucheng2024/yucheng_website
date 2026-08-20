@@ -80,10 +80,8 @@ body::before {
     padding: clamp(1.35rem, 1.05rem + 1vw, 2.25rem);
     border: 1px solid rgba(207, 219, 230, 0.78);
     border-radius: var(--radius);
-    background: rgba(255, 255, 255, 0.945);
+    background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 18px 48px rgba(30, 58, 82, 0.065);
-    -webkit-backdrop-filter: blur(14px) saturate(1.04);
-    backdrop-filter: blur(14px) saturate(1.04);
 }
 
 .page__content {
@@ -1160,8 +1158,6 @@ section {
         border-radius: 0;
         background: #fff;
         box-shadow: none;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
     }
 
     .sidebar .h-card {
