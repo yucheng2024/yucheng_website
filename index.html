@@ -6,7 +6,8 @@ layout: single
 author_profile: true
 classes: wide
 ---
-<link rel="stylesheet" href="{{ '/assets/CSS/custom.css?v=20260820-11' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/CSS/custom.css?v=20260820-12' | relative_url }}">
+<script defer src="{{ '/assets/js/responsive-details.js?v=20260820-1' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/publications.js?v=20260819-3' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/section-navigation.js?v=20260820-4' | relative_url }}"></script>
 
@@ -81,8 +82,8 @@ classes: wide
 <section id = "research-news">
     <h2>Research News</h2>
     <div class="news-timeline">
-        <section class="news-year" aria-labelledby="news-2026">
-            <h3 id="news-2026">2026</h3>
+        <details class="news-year" open>
+            <summary><h3 id="news-2026">2026</h3></summary>
             <ul>
                 <li class="news-item--paper"><time datetime="2026-08">Aug</time><span>One paper has been accepted by IEEE HealthCom 2026!</span></li>
                 <li class="news-item--service"><time datetime="2026-07">Jul</time><span>I am serving as TPC Chair for the Young Researcher Symposium at IEEE HealthCom 2026!</span></li>
@@ -96,10 +97,10 @@ classes: wide
                 <li class="news-item--service"><time datetime="2026-04">Apr</time><span>I am serving as a TPC member for IEEE INFOCOM 2027!</span></li>
                 <li class="news-item--service"><time datetime="2026-02">Feb</time><span>I am serving as TPC Chair for the mHealth Security Workshop (co-located with IEEE/ACM CHASE 2026)!</span></li>
             </ul>
-        </section>
+        </details>
 
-        <section class="news-year" aria-labelledby="news-2025">
-            <h3 id="news-2025">2025</h3>
+        <details class="news-year" open>
+            <summary><h3 id="news-2025">2025</h3></summary>
             <ul>
                 <li class="news-item--paper"><time datetime="2025-12">Dec</time><span>One paper has been accepted by IEEE INFOCOM 2026!</span></li>
                 <li class="news-item--paper"><time datetime="2025-12">Dec</time><span>One paper has been accepted by IEEE Internet of Things Journal!</span></li>
@@ -111,10 +112,10 @@ classes: wide
                 <li class="news-item--service"><time datetime="2025-04">Apr</time><span>I am serving as an area chair of IEEE MIPR 2025.</span></li>
                 <li class="news-item--paper"><time datetime="2025-02">Feb</time><span>One paper has been accepted by IEEE/ACM CHASE 2025!</span></li>
             </ul>
-        </section>
+        </details>
 
-        <section class="news-year" aria-labelledby="news-2024">
-            <h3 id="news-2024">2024</h3>
+        <details class="news-year" open>
+            <summary><h3 id="news-2024">2024</h3></summary>
             <ul>
                 <li class="news-item--event"><time datetime="2024-11">Nov</time><span>I have been accepted to attend the NeTS Early Career Investigator Workshop at NSF Headquarters.</span></li>
                 <li class="news-item--paper"><time datetime="2024-10">Oct</time><span>One paper has been accepted by IEEE CIC 2024!</span></li>
@@ -123,7 +124,7 @@ classes: wide
                 <li class="news-item--service"><time datetime="2024-09">Sep</time><span>We are organizing the IEEE DDP in New York City!</span></li>
                 <li class="news-item--service"><time datetime="2024-07">Jul</time><span>I am serving as a session chair of IEEE ICDCS!</span></li>
             </ul>
-        </section>
+        </details>
     </div>
 </section>
 
@@ -193,6 +194,7 @@ classes: wide
     </details>
 </section>
         
+<div class="academic-highlights" aria-label="Awards and teaching">
 <section id = "recent-awards">
     <h2>Recent Awards & Honors</h2>
     <ul>
@@ -216,6 +218,7 @@ classes: wide
         <li>Python Programming, 2024 Spring, 2023 Fall, 2023 Spring, 2022 Fall</li>
     </ul>
 </section>
+</div>
         
 <section id = "professional-services">
     <h2>Professional Services</h2>
