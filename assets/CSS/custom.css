@@ -691,9 +691,9 @@ section {
 }
 
 .site-visits {
-    margin: 2.5rem 0 0;
-    padding-top: 1rem;
-    border-top: 1px solid var(--line);
+    margin: 1.5rem 0 0;
+    padding-top: 0;
+    border-top: 0;
     text-align: center;
 }
 
@@ -996,8 +996,8 @@ section {
     }
 
     .site-visits {
-        margin-top: 2rem;
-        padding-top: 0.9rem;
+        margin-top: 1.25rem;
+        padding-top: 0;
     }
 }
 
