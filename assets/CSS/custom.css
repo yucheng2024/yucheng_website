@@ -267,10 +267,6 @@ section {
     font-size: 15px;
 }
 
-.research-overview > h2 {
-    font-size: clamp(24px, 2vw, 28px);
-}
-
 .research-overview__intro {
     max-width: 44rem;
     margin: -0.15rem 0 1.2rem;
@@ -291,7 +287,7 @@ section {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: 1.15rem clamp(1rem, 2.1vw, 1.4rem) 1.25rem;
+    padding: 1.3rem clamp(1rem, 2.1vw, 1.4rem) 1.35rem;
 }
 
 .research-direction:first-child {
@@ -306,12 +302,13 @@ section {
     border-left: 1px solid var(--line);
 }
 
-.research-direction__index {
-    margin-bottom: 0.6rem;
-    color: #7690a3;
-    font-size: 11px;
-    font-weight: 750;
-    letter-spacing: 0.09em;
+.research-direction::before {
+    content: "";
+    width: 2.2rem;
+    height: 2px;
+    margin-bottom: 0.85rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), #8fb7d1);
 }
 
 .research-direction__title {
@@ -323,43 +320,10 @@ section {
 }
 
 .research-direction__description {
-    margin: 0 0 1rem;
+    margin: 0;
     color: #3f5568;
     font-size: 15px;
     line-height: 1.65;
-}
-
-.research-direction__action {
-    display: inline-flex;
-    align-items: center;
-    align-self: flex-start;
-    gap: 0.35rem;
-    margin-top: auto;
-    padding: 0.15rem 0;
-    color: #4d718c;
-    font-size: 12px;
-    font-weight: 730;
-    letter-spacing: 0.025em;
-    text-decoration: none;
-}
-
-.research-direction__action span {
-    transition: transform 150ms ease;
-}
-
-.research-direction__action:hover {
-    color: var(--navy);
-    text-decoration: underline;
-}
-
-.research-direction__action:hover span {
-    transform: translateX(2px);
-}
-
-.page__content .research-direction__action:focus-visible {
-    outline: 0;
-    color: var(--navy);
-    box-shadow: 0 2px 0 rgba(42, 102, 143, 0.55);
 }
 
 .sidebar {
@@ -890,16 +854,12 @@ section {
         border-left: 0;
     }
 
-    .research-direction__index {
-        margin-bottom: 0.45rem;
-    }
-
     .research-direction__title {
         margin-bottom: 0.4rem;
     }
 
     .research-direction__description {
-        margin-bottom: 0.7rem;
+        margin-bottom: 0;
     }
 }
 
