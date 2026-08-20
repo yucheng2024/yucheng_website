@@ -69,6 +69,15 @@
                 link.removeAttribute("aria-current");
             }
         });
+
+        if (current) {
+            const activeIndex = navItems.indexOf(current);
+            navigation.style.setProperty("--active-index", activeIndex);
+            navigation.style.setProperty("--active-offset", `${activeIndex * 2.22}rem`);
+            navigation.classList.add("has-active-section");
+        } else {
+            navigation.classList.remove("has-active-section");
+        }
     };
 
     const scheduleUpdate = () => {
