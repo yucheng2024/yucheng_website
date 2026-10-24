@@ -7,3 +7,6 @@ vendor
 .DS_Store
 ruby4_compat.rb
 _plugins
+
+# Local source book; publish only the extracted authored chapter.
+assets/papers/Network Security Empowered by Artificial Intelligence.pdf
